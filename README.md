@@ -22,7 +22,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/profile-card-RkvOOLAwGs)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/four-card-feature-section-TxtoFSNwF-)
 - Live Site URL: [Blog Card](cris575.github.io/Four-card-feature-section/)
 
 ### Built with
