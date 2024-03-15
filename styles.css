@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+.header {
+  text-align: center;
+  max-width: 552px;
+  margin-top: 12rem;
+  padding: 4.6rem;
+  height: auto;
+  margin: 3rem auto;
+}
+
+.header-title {
+  font-size: 2.5em;
+  color: var(--Grayish-Blue);
+  font-weight: 200;
+  margin: 0;
+}
+.header-subtitle {
+  font-size: 2.5em;
+  margin: 0;
+  color: var(--Very-Dark-Blue);
+  font-weight: 800;
+}
+.header-paragraph,
+.grid-paragraph {
+  color: var(--Grayish-Blue);
+  font-size: 1.3em;
+}
+
+div > * {
+  margin: 0;
+}
+
+.grid > div:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.grid {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "a b c"
+    "a d c";
+  gap: 3rem;
+}
+
+.grid > div {
+  border-radius: 5px;
+  padding: 3rem;
+  width: 100%;
+  box-shadow: 0 1rem 2rem 0.5rem #dedede;
+  height: 22rem;
+  transition: 0.3s all;
+}
+
+.container-image {
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+}
+.card-1 {
+  grid-area: b;
+  border-top: var(--Red) solid 5px;
+}
+
+.card-2 {
+  grid-area: a;
+  align-self: center;
+  border-top: var(--Cyan) solid 5px;
+}
+.card-3 {
+  grid-area: d;
+  border-top: var(--Orange) solid 5px;
+}
+
+.card-4 {
+  grid-area: c;
+  align-self: center;
+  border-top: var(--Blue) solid 5px;
+}
+
+@media (width < 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d";
+  }
+}
+
+@media (width < 600px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "a"
+      "b"
+      "d"
+      "c";
+  }
+}
